@@ -1,5 +1,7 @@
 RaspberryPi by default comes with SSH disabled.  For anyone who wants to run a RaspberryPi without a monitor configuring the ability ssh into the Raspbian is a bit of a pain.  This script helps mitigate that.
 
+Also if you don't have a wired network and want to configure your wifi, this will also help you do that.  Asking for the PSK is quiet so you don't see your secret typed in clear text on the screen.
+
 First if you are running a unix OS that is not OSX simply mount your SD/microSD card. 
 
 If you are running OSX  You will need to install OSXFuse ( https://osxfuse.github.io/ ) , fuse-ext2 (http://sourceforge.net/projects/fuse-ext2/ ).

@@ -2,5 +2,10 @@ RaspberryPi by default comes with SSH disabled.  For anyone who wants to run a R
 
 First if you are running a unix OS that is not OSX simply mount your SD/microSD card. 
 
-If you are running OSX  You will need to install OSXFuse, fuse-ext2 and enable read/write.
+If you are running OSX  You will need to install OSXFuse ( https://osxfuse.github.io/ ) , fuse-ext2 (http://sourceforge.net/projects/fuse-ext2/ ).
 
+Once you have installed both of those you need to enabled read/write on fuse-ext2 
+
+```
+sudo sed -e 's/OPTIONS="auto_xattr,defer_permissions"/OPTIONS="auto_xattr,defer_permissions,rw+"/' -i .orig /System/Library/Filesystems/fuse-ext2.fs/fuse-ext2.util
+```
